@@ -35,11 +35,18 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
     'AUTH_HEADER_TYPES': ('Bearer',),
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Healthcare Backend API',
+    'DESCRIPTION': 'Backend APIs for managing patients, doctors, and mappings',
+    'VERSION': '1.0.0',
 }
 
 # Application definition
@@ -52,6 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'drf_spectacular',
     'apps.accounts.apps.AccountsConfig',
     'apps.patients.apps.PatientsConfig',
     'apps.doctors.apps.DoctorsConfig',
