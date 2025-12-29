@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'apps.accounts.apps.AccountsConfig',
     'apps.patients.apps.PatientsConfig',
     'apps.doctors.apps.DoctorsConfig',
+    'apps.mappings.apps.MappingsConfig',
+
 ]
 
 MIDDLEWARE = [
